@@ -1,18 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0b0b0b" />
+        <meta
+            name="description"
+            content="Metal Mayhem — a cinematic comic-book intro experiment."
+        />
+
+        <title>METAL MAYHEM — Intro Experience</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <title>Project</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     </head>
 
     <body>
-        <h1>
-            <span>Metal Text</span>
-            <span>Metal Text</span>
-        </h1>
+        <main class="intro" id="intro">
+            <div class="backdrop" aria-hidden="true">
+                <div class="backdrop__glow"></div>
+                <div class="backdrop__symbol">X</div>
+                <div class="paint paint--one"></div>
+                <div class="paint paint--two"></div>
+                <div class="paint paint--three"></div>
+                <div class="halftone"></div>
+            </div>
+
+            <header class="topbar">
+                <a class="brand" href="#intro" aria-label="Metal Mayhem home">
+                    <span class="brand__mark">M</span>
+                    <span class="brand__name">METAL MAYHEM</span>
+                </a>
+
+                <div class="chapter">
+                    <span class="chapter__number">01</span>
+                    <span class="chapter__divider">/</span>
+                    <span>INTRO SEQUENCE</span>
+                </div>
+
+                <button class="skip" id="skipIntro" type="button">
+                    <span>SKIP INTRO</span>
+                    <span class="skip__arrow">↗</span>
+                </button>
+            </header>
+
+            <section class="stage" aria-label="Metal Mayhem intro">
+                <div class="side-note side-note--left">
+                    <span class="side-note__icon">✳</span>
+                    <span>GOOD</span>
+                    <span>BAD</span>
+                    <span>UNHINGED</span>
+                </div>
+
+                <div class="hero" id="hero">
+                    <div class="hero__aura"></div>
+
+                    <img
+                        class="hero__image"
+                        id="heroImage"
+                        src="./assets/images/hero.png"
+                        alt="Comic-book wasteland raider"
+                    />
+
+                    <div class="hero__fallback" aria-hidden="true">
+                        <span class="fallback__ring"></span>
+                        <span class="fallback__letter">X</span>
+                        <span class="fallback__label">RAIDER // 001</span>
+                    </div>
+                </div>
+
+                <div class="title-wrap" id="titleWrap">
+                    <div class="title-stamp">NO RULES. NO MERCY.</div>
+
+                    <h1 class="metal-title" id="metalTitle">
+                        <span
+                            class="title-layer title-layer--shadow"
+                            aria-hidden="true"
+                        >
+                            METAL MAYHEM
+                        </span>
+                        <span class="title-layer title-layer--main">
+                            METAL MAYHEM
+                        </span>
+                    </h1>
+
+                    <div class="title-subline">
+                        <span class="subline__rule"></span>
+                        <p>CHAOS / LOOT / LEGENDS</p>
+                        <span class="subline__rule"></span>
+                    </div>
+                </div>
+
+                <div class="impact" id="impact" aria-hidden="true"></div>
+                <div class="flash" id="flash" aria-hidden="true"></div>
+
+                <div class="side-note side-note--right">
+                    <span>EST. NOWHERE</span>
+                    <span class="side-note__scribble">STAY</span>
+                    <span class="side-note__scribble">CRAZY!</span>
+                    <span class="side-note__smile">☻</span>
+                </div>
+            </section>
+
+            <footer class="bottombar">
+                <div class="status">
+                    <span class="status__dot"></span>
+                    <span id="statusText">INITIALIZING CHAOS</span>
+                </div>
+
+                <div class="progress">
+                    <span class="progress__label" id="progressLabel">00</span>
+                    <div class="progress__track">
+                        <span class="progress__bar" id="progressBar"></span>
+                    </div>
+                    <span class="progress__label">100</span>
+                </div>
+
+                <div class="scroll-hint">
+                    <span>BUCKLE UP</span>
+                    <span class="scroll-hint__mouse">↓</span>
+                </div>
+            </footer>
+
+            <div class="grain" aria-hidden="true"></div>
+            <div class="scanlines" aria-hidden="true"></div>
+            <div class="vignette" aria-hidden="true"></div>
+            <div class="cursor" id="cursor" aria-hidden="true"></div>
+        </main>
 
         <script src="./assets/js/main.js"></script>
     </body>
